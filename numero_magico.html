@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Número Mágico</title>
+</head>
+<body>
+<script type="text/javascript">
+	var mensaje = "Adivina: ¿Cuál es el número mágico?";
+	var min = 0;
+	var max = 100;
+
+	var numero_magico = Math.round( Math.random() * (max-min) + min );
+	var numero_ingresado;
+
+	console.log("El número mágico es: " + numero_magico);
+	console.log("Escribre 'salir' si no deseas adivinar");
+	
+	SolicitarNumero(mensaje);
+
+	while(true){
+		if( parseInt( numero_ingresado ) === numero_magico ){
+			alert("Adivinaste el número mágico");
+			break;
+		} else if ( numero_ingresado === null || numero_ingresado === undefined ){
+			break;
+		} else if ( numero_ingresado.toLowerCase() === 'salir' ){
+			alert("Saliendo del juego . . .");
+			break;
+		} else if ( numero_ingresado < numero_magico ){
+			mensaje = "El número ingresado es menor";
+			SolicitarNumero(mensaje);
+		} else if ( numero_ingresado > numero_magico ){
+			mensaje = "El número ingresado es mayor";
+			SolicitarNumero(mensaje);
+		}
+	}
+
+	function SolicitarNumero(mensaje){
+	  numero_ingresado = prompt(mensaje, 0);
+	  return;
+	}
+</script>
+</body>
+</html>
