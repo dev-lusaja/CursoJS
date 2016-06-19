@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>número mágico v2</title>
+</head>
+
+<body>
+<h2>Adivina: ¿Cuál es el número mágico?</h2>
+<div>
+	<label for="numero">Ingresar número</label>
+	<input type="text" id="numero" value="0">
+	<button id="button_adivina">Adivinar</button>
+</div>
+<div>
+	<strong><span id="mensaje"></span></strong>
+</div>
+<script type="text/javascript">
+	var min = 0;
+	var max = 100;
+	var numero_magico = Math.round( Math.random() * (max-min) + min );
+	var numero_ingresado;
+	
+	console.log("El número mágico es: " + numero_magico);
+
+	var button = document.querySelector('#button_adivina');
+
+	button.addEventListener("click", function() {
+		var numero = document.querySelector('#numero');
+		numero_ingresado = numero.value;
+
+		if( parseInt( numero_ingresado ) === numero_magico ){
+			mensaje = "Adivinaste el número mágico";
+		} else if ( numero_ingresado < numero_magico ){
+			mensaje = "El número ingresado es menor";
+		} else if ( numero_ingresado > numero_magico ){
+			mensaje = "El número ingresado es mayor";
+		} else {
+			mensaje = "Ingresa un número entre " + min + " y " + max;
+		}
+		document.querySelector('#mensaje').innerHTML = mensaje;
+		return false;
+	});
+</script>
+</body>
+
+</html>
