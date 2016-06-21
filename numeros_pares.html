@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>números pares</title>
+</head>
+<body>
+	<script>
+		// Este ejercicio consiste en pasar solo los numeros pares del arreglo numeros haia el arreglo numeros pares
+		var numeros = [10,11,12,13,14,15];
+		var numeros_pares;
+
+		numeros_pares = numeros.filter(NumeroPar);
+
+		function NumeroPar(numero) {
+			return numero % 2 === 0;
+		}
+
+		// Se imprimiran solo los numeros pares
+		console.log(numeros_pares);
+	</script>
+</body>
+</html>
