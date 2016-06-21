@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Closure</title>
+</head>
+<body>
+	<button id="btn_clic">Haz clic en mi</button>
+
+	<script>
+		
+		(function() {
+			var btn = document.querySelector('#btn_clic');
+			btn.addEventListener('click', function () {
+				console.log('hizo clic en mi');
+			});
+		})();
+
+	</script>
+</body>
+</html>
