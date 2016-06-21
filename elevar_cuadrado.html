@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Elevar al cuadrado</title>
+</head>
+
+<body>
+	<script>
+		var numeros = [1,2,3,4,5,6];
+		var cuadrados = [];
+
+		// map recorre el arreglo recibiendo un callback el cual peude retornar cualquier valor.
+		cuadrados = numeros.map(Cuadrado);
+
+		function Cuadrado(num) {
+			// el metodo pow eleva un numero a el exponente indicado.
+			return Math.pow(num, 2);
+		}
+
+		console.log(cuadrados);
+	</script>
+</body>
+</html>
