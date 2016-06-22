@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objetos con funciones</title>
+</head>
+<body>
+	<script>
+	(function() {
+		function Perro(nombre, color) {
+			this.nombre = nombre;
+			this.color = color;
+			this.voz = "guau";
+			this.saludar = function () {
+				console.log("Soy un perro de nombre " + this.nombre + " y de color " + this.color + ". . . " + this.voz);
+			}
+		}
+		// Con prototype podemos agregar atributos y metodos a los objetos instanciados o no.
+		Perro.prototype.edad = 2;
+
+		var perro = new Perro('toby', 'marron');
+		console.log("La edad de los 2 perros es: " + perro.edad + " meses.");
+		perro.saludar();
+		// console.log(perro.__proto__.__proto__);
+		var perro2 = new Perro('sheera', 'caramelo');
+		perro2.saludar();
+	})();
+	</script>
+</body>
+</html>
