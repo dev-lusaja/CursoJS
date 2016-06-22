@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objetos con funciones</title>
+</head>
+<body>
+	<script>
+	(function() {
+		function Perro(nombre, color) {
+			this.nombre = nombre;
+			this.color = color;
+			this.voz = "guau";
+			this.saludar = function () {
+				console.log("Soy un perro de nombre " + this.nombre + " y de color " + this.color + ". . . " + this.voz);
+			}
+		}
+
+		var perro = new Perro('toby', 'marron');
+		perro.saludar();
+
+		var perro2 = new Perro('sheera', 'caramelo');
+		perro2.saludar();
+	})();
+	</script>
+</body>
+</html>
