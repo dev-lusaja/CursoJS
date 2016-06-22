@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Get Set</title>
+</head>
+<body>
+	<script>
+		
+	var Humano = {
+		val_nombre: 'sin nombre',
+		sexo: 'masculino',
+		edad: '26',
+		get nombre(){
+			return this.val_nombre;
+		},
+		set nombre(nombre){
+			if (nombre === '' || typeof nombre === "undefined") {
+				return;
+			}
+			this.val_nombre = nombre; 
+		}
+	}
+	Humano.nombre = 'Oscar';
+	console.log(Humano.nombre);
+
+	</script>
+</body>
+</html>
