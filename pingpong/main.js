@@ -36,7 +36,6 @@
 	}
 
 	function draw(ctx, element) {
-		console.log(element);
 		if (element !== null && element.hasOwnProperty('kind')) {
 			switch(element.kind){
 				case "rectangle":
@@ -71,8 +70,8 @@ window.addEventListener("load", main);
 
 function main() {
 	var board = new Board(800,400);
-	var bar = new Bar(20,100,40,100, board);
-	var bar2 = new Bar(740,100,40,100, board);
+	var bar = new Bar(0,150,40,100, board);
+	var bar2 = new Bar(760,150,40,100, board);
 	var canvas = document.getElementById('canvas');
 	var board_view = new BoardView(canvas, board);
 	board_view.draw();
