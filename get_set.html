@@ -8,11 +8,10 @@
 	<script>
 		
 	var Humano = {
-		val_nombre: 'sin nombre',
 		sexo: 'masculino',
 		edad: '26',
 		get nombre(){
-			return this.val_nombre;
+			return this.val_nombre.toUpperCase();
 		},
 		set nombre(nombre){
 			if (nombre === '' || typeof nombre === "undefined") {
@@ -21,8 +20,9 @@
 			this.val_nombre = nombre; 
 		}
 	}
-	Humano.nombre = 'Oscar';
+	Humano.nombre = 'Oscar2';
 	console.log(Humano.nombre);
+	// console.log(Humano.nombre);
 
 	</script>
 </body>
